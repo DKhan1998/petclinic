@@ -7,7 +7,7 @@
     <version>6.0.0</version>
 
     <name>Spring Framework Petclinic</name>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <description>A Spring Framework application based on JSP, Spring MVC, Spring Data JPA, Hibernate and JDBC</description>
     <url>https://spring-petclinic.github.io/</url>
 
@@ -463,9 +463,6 @@
     <profiles>
         <profile>
             <id>H2</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <properties>
                 <db.script>h2</db.script>
                 <jpa.database>H2</jpa.database>
@@ -504,6 +501,9 @@
         </profile>
         <profile>
             <id>MySQL</id>
+              <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
                 <db.script>mysql</db.script>
                 <jpa.database>MYSQL</jpa.database>
